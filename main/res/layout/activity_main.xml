@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn1"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/button_style"
+            android:text="커뮤니티"
+            android:onClick="moveButton"
+            android:textColor="#FFFFFF" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn2"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:layout_alignStart="@id/btn1"
+            android:layout_below = "@id/btn1"
+            android:background="@drawable/button_style"
+            android:text="로드맵"
+            android:textColor="#FFFFFF" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn3"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_style"
+            android:text="로그인"
+            android:textColor="#FFFFFF" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn4"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_style"
+            android:text="회원가입"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/company1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Dongseo software Dev. Team 14"/>
+    </LinearLayout>
+</LinearLayout>
+
