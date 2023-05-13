@@ -24,14 +24,14 @@
                 android:textSize="30dp"
                 />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="1. 제목"
-                android:background=""
+                android:background="@color/white"
                 android:textColor="@color/black"
                 android:gravity="left"
-                android:id="@+id/btn1"/>
+                android:id="@+id/btn10"/>
         </LinearLayout>
 
         <LinearLayout
@@ -39,11 +39,11 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="vertical">
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="2. 제목"
-                android:background=""
+                android:background="@color/white"
                 android:textColor="@color/black"
                 android:gravity="left"/>
         </LinearLayout>
@@ -54,11 +54,11 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="3. 제목"
-                android:background=""
+                android:background="@color/white"
                 android:textColor="@color/black"
                 android:gravity="left"/>
         </LinearLayout>
@@ -68,13 +68,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_margin="10dp"
                 android:text="로드맵"/>
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
