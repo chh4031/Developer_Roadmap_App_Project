@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SingupActivity"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="#45529F"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#45529F"
+            android:gravity="left|center"
+            android:orientation="vertical"
+            android:shadowColor="#000000"
+            android:shadowDx="7.0"
+            android:shadowDy="7.0"
+            android:shadowRadius="7.0"
+            android:text="회원가입"
+            android:textColor="#E4E1E1"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="이용약관" />
+
+     <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="230dp"
+        android:layout_gravity="center">
+
+         <ScrollView
+             android:layout_width="match_parent"
+             android:layout_height="200dp"
+             android:layout_marginTop="10dp">
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:background="@drawable/textview_border"
+                 android:gravity="center_horizontal"
+                 android:text="Team14 익명 커뮤니티를 이용하는 모든 사용자는 아래의 이용약관을 따라야 합니다.
+
+제 1조 (서비스 이용)
+
+Team14 익명 커뮤니티는 인터넷을 통해 회원 간 정보를 공유하는 서비스를 제공합니다.
+사용자는 이용 중 허위사실을 유포하거나 명예훼손, 저작권 침해 등의 범죄 행위를 할 수 없습니다.
+사용자는 타인의 개인정보를 무단으로 수집하거나 이용할 수 없습니다.
+제 2조 (사용자의 의무)
+
+사용자는 Team14 익명 커뮤니티 이용 중 불법적인 행위를 하지 않아야 합니다.
+사용자는 타인의 권리나 프라이버시를 침해할 수 없습니다.
+사용자는 자신이 작성한 게시물에 대해 책임을 져야 합니다.
+제 3조 (면책조항)
+
+Team14은 사용자 간의 정보 공유만을 허용할 뿐, 정보의 진실성과 적법성에 대해 책임을 지지 않습니다.
+Team14은 이용자가 익명으로 서비스를 이용하는 것을 전제로 하므로, 사용자가 공개한 정보와 이로 인한 피해에 대해 책임을 지지 않습니다.
+제 4조 (약관의 변경)
+Team14은 약관을 변경할 수 있으며, 변경 시 공지사항을 통해 이용자에게 공지합니다.
+
+제 5조 (관할 법원 및 준거법)
+본 약관에 관한 분쟁은 대한민국 법률에 따라 해결합니다. 만일 소송이 제기될 경우 관할 법원은 Team14 소재지를 기준으로 합니다" />
+
+         </ScrollView>
+
+     </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="16dp">
+
+                <RadioButton
+                    android:id="@+id/radioAgree"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="동의" />
+
+                <RadioButton
+                    android:id="@+id/radioDisagree"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="비동의" />
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etNickname"
+                    android:layout_gravity="center"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:hint="닉네임" />
+
+                <EditText
+                    android:id="@+id/etUsername"
+                    android:layout_gravity="center"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:hint="아이디" />
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_gravity="center"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:hint="비밀번호"
+                    android:inputType="textPassword" />
+
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="45dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="회원가입 완료" />
+
+        </LinearLayout>
+
+
+</LinearLayout>
