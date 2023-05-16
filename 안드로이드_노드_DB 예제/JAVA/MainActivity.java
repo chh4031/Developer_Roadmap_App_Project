@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
                 jsonParam.put("text", userText);
 
                 System.out.println(userText);
-
+// 왜 쓰는지 알 수 없느 부분
                 OutputStreamWriter wr = new OutputStreamWriter(con.getOutputStream());
                 wr.write(jsonParam.toString());
                 wr.flush();
@@ -141,8 +141,8 @@ public class MainActivity extends AppCompatActivity {
 
                 writer.close();
                 System.out.println(response.toString());
-
-                return response.toString();
+// 여기까지
+                return jsonParam.toString();
 
             } catch (MalformedURLException e) {
                 e.printStackTrace();
