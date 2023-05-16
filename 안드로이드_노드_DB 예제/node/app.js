@@ -26,9 +26,12 @@ app.use(express.json());
 
 app.post('/', async (req, res) => {
   try{
-    const receivedData = await req.body.text; // 전송된 데이터 가져오기
+    const receivedData = await req.body; // 전송된 데이터 가져오기
     console.log('받은 데이터:', receivedData);
-    let dbData = receivedData.split(" ");
+    // let dbData = receivedData.split(" ");
+    // 아래와 같이 json형태로 데이터가 들어오는 것을 알 수 있음.
+    console.log(receivedData.text)
+    let dbData = receivedData.text
     console.log(dbData);
     // 추가적인 처리나 응답 작업 수행 가능
     res.send('데이터를 성공적으로 받았습니다.');
