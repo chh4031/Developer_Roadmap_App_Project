@@ -7,7 +7,7 @@ const connectDB = require("./middleware/db");
 
 // 익스프레스 객체 생성
 var app = express();
-
+app.use(express.json());
 // 기본 포트를 app 객체에 속성으로 설정
 app.set('port', process.env.PORT || 7878);
 
@@ -22,22 +22,18 @@ app.get("/", async function(req, res, next) {
   }
 });
 
-app.use(express.json());
-
 app.post('/', async (req, res) => {
   try{
-    const receivedData = await req.body; // 전송된 데이터 가져오기
+    const receivedData = await req.body; //데이터를 json형식으로 가져옴.
     console.log('받은 데이터:', receivedData);
-    // let dbData = receivedData.split(" ");
-    // 아래와 같이 json형태로 데이터가 들어오는 것을 알 수 있음.
-    console.log(receivedData.text)
-    let dbData = receivedData.text
-    console.log(dbData);
-    // 추가적인 처리나 응답 작업 수행 가능
-    res.send('데이터를 성공적으로 받았습니다.');
+    console.log(receivedData)
+    res.send('데이터 전송됨.');
+
+    //회원가입을 위한 코드
     const add = await connectDB.query(
-      "insert into user(user_id, user_pw, user_name) values(?,?,?)", 
-      [dbData[0], dbData[1], dbData[2]]);
+      "insert into user(user_name, user_id, user_pw) values(?,?,?)", 
+      [receivedData.singup_name, receivedData.singup_id, receivedData.singup_pw]);
+
   }catch(error){
     console.log("error");
   }
