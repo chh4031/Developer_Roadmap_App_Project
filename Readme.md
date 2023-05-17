@@ -22,3 +22,11 @@
     - 각 파일들이 기존 파일의 이름과 겹치지 않도록 정의할것.
     - Commit 하기전 Fork 확인 후 Update 이후 Pull 한 뒤에 Commit 할것.
     - XML 파일에서 android:id 에 대해서는 태그 바로 아래에 작성할것. (각 위젯의 첫번째 줄)
+***
+## Pull Requests 과정
+    1. Fork 버튼을 눌러 Update를 진행한다.
+    2. 소스트리에서 Pull를 진행한다.
+    3. 새로 작성한 파일이나 수정한 파일에 대해 Commit을 위해 스테이지에 올린다.
+    4. Commit을 진행한다. (진행시 저장소에도 반영하는 origin/master 버튼을 체크하고 진행)
+    5. 소스트리에서 저장소를 눌러 Pull Requests 를 찾아 눌러서 진행한다.
+    6. Pull Requests를 작성하여 게시한다.
