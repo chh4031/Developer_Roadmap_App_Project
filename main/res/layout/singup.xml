@@ -93,17 +93,24 @@
                 android:gravity="center"
                 android:padding="16dp">
 
+                <RadioGroup
+                    android:id="@+id/singup_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
                     <RadioButton
-                        android:id="@+id/radioAgree"
+                        android:id="@+id/singup_agree"
                         android:layout_width="100dp"
                         android:layout_height="50dp"
                         android:text="동의" />
 
                     <RadioButton
-                        android:id="@+id/radioDisagree"
+                        android:id="@+id/singup_disagree"
                         android:layout_width="100dp"
                         android:layout_height="50dp"
                         android:text="비동의" />
+                </RadioGroup>
 
             </LinearLayout>
 
@@ -113,24 +120,27 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/etNickname"
+                        android:id="@+id/singup_name"
                         android:layout_gravity="center"
                         android:layout_width="300dp"
                         android:layout_height="50dp"
+                        android:text=""
                         android:hint="닉네임" />
 
                     <EditText
-                        android:id="@+id/etUsername"
+                        android:id="@+id/singup_id"
                         android:layout_gravity="center"
                         android:layout_width="300dp"
                         android:layout_height="50dp"
+                        android:text=""
                         android:hint="아이디" />
 
                     <EditText
-                        android:id="@+id/etPassword"
+                        android:id="@+id/singup_pw"
                         android:layout_gravity="center"
                         android:layout_width="300dp"
                         android:layout_height="50dp"
+                        android:text=""
                         android:hint="비밀번호"
                         android:inputType="textPassword" />
 
@@ -145,7 +155,7 @@
                 android:layout_marginTop="45dp">
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnRegister"
+                    android:id="@+id/singup_Register"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/button_style"
