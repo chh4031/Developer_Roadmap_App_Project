@@ -25,8 +25,8 @@ app.get("/", async function(req, res, next) {
 app.post('/', async (req, res) => {
   try{
     const receivedData = await req.body; //데이터를 json형식으로 가져옴.
-    console.log('받은 데이터:', receivedData);
-    console.log(receivedData)
+    // console.log('받은 데이터:', receivedData);
+    // console.log(receivedData)
     res.send('데이터 전송됨.');
 
     //회원가입을 위한 코드
@@ -38,6 +38,48 @@ app.post('/', async (req, res) => {
     console.log("error");
   }
 });
+
+//로그인 함수
+
+app.post('/sign', async (req,res) => {
+  try{
+    let result = "";
+    const {login_id, login_pw} = req.body; // 안드로이드에서 id,pw 값 가져오기
+    const isuser = await connectDB.query("select * from user where user_id = ?" , [login_id]); //db에서 id값 같은거 가져오기
+    if(isuser[0].length == 0){
+      result = "회원아님";
+      console.log("회원아님");
+      return res.send(result);
+    } else{
+      if(isuser[0][0].user_id == login_id && isuser[0][0].user_pw == login_pw) {
+        result = "로그인 성공";
+        console.log("로그인 성공");
+        return res.send(result);
+      }else if(isuser[0][0].user_id  == login_id && isuser[0][0].user_pw != login_pw) {
+        result = "아이디 또는 비번 틀림";
+        console.log("아이디 또는 비번 틀림");
+        return res.send(result);
+      }else if(isuser[0][0].user_id  != login_id && isuser[0][0].user_pw != login_pw){
+        result = "아이디 또는 비번 틀림";
+        console.log("아이디 또는 비번 틀림");
+        return res.send(result);
+      }
+    }
+  }catch(error){
+    console.log(error);
+  }
+});
+
+app.get('/sign' , async (req,res) => {
+  try{
+    res.send(check);
+  }catch(error){
+    console.log(error);
+  }
+});
+
+
+// end of 로그인
 
 
 // Express 서버 시작
