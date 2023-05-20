@@ -59,7 +59,7 @@ public class singup extends AppCompatActivity{
                                 if(edname.length() == 0 || edid.length() == 0 || edpw.length() == 0){
                                     Toast.makeText(getApplicationContext(), "응 공백 안되", Toast.LENGTH_SHORT).show();
                                 }else {
-                                    new SendTask().execute("http://192.168.0.192:7878/");
+                                    new SendTask().execute("http://192.168.0.17:7878/");
                                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                     startActivity(intent);
                                 }
@@ -76,22 +76,8 @@ public class singup extends AppCompatActivity{
                 }
             }
         });
-
-        //회원가입 버튼을 누를 때 작동
-//        Register.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if(edname.length() == 0 || edid.length() == 0 || edpw.length() == 0){
-//                    System.out.println("중단");
-//                    Toast.makeText(getApplicationContext(), "응 공백 안되", Toast.LENGTH_SHORT).show();
-//                }else {
-//                    new SendTask().execute("http://192.168.0.192:7878/");
-//                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-//                    startActivity(intent);
-//                }
-//            }
-//        });
     }
+
         //회원가입에서 데이터를 보내는 코드
         public class SendTask extends AsyncTask<String, String, String> {
 

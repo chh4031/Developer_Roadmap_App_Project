@@ -20,13 +20,12 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+
 public class login extends AppCompatActivity {
     EditText edid;
     EditText edpw;
 
     Button loginbtn;
-    Button main_btn3;
-    Button main_btn4;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,11 +36,10 @@ public class login extends AppCompatActivity {
         loginbtn = (Button) findViewById(R.id.btnLogin);
 
 
-
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new SendTask().execute("http://192.168.0.175:7878/");
+                new SendTask().execute("http://192.168.0.17:7878/");
             }
         });
     }
@@ -101,9 +99,11 @@ public class login extends AppCompatActivity {
                 Toast.makeText(login.this, result, Toast.LENGTH_SHORT).show();
                 if(result.equals("로그인 성공")) {
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    Intent godata = new Intent(login.this, MainActivity.class);
+                    godata.putExtra("key", "1");
                     startActivity(intent);
-                    main_btn3.setVisibility(View.GONE);
-                    main_btn4.setVisibility(View.GONE);
+                    startActivity(godata);
+
                 }
             } else {
                 Toast.makeText(login.this, "전송실패", Toast.LENGTH_SHORT).show();
