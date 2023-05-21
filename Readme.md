@@ -30,3 +30,4 @@
     4. Commit을 진행한다. (진행시 저장소에도 반영하는 origin/master 버튼을 체크하고 진행)
     5. 소스트리에서 저장소를 눌러 Pull Requests 를 찾아 눌러서 진행한다.
     6. Pull Requests를 작성하여 게시한다.
+    
