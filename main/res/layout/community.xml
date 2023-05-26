@@ -28,7 +28,7 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
@@ -36,74 +36,28 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="1. 제목"
-                android:background="#FFFFFF"
-                android:textColor="@color/black"
-                android:gravity="left"
-                android:id="@+id/btn1"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="2. 제목"
-                android:background="#FFFFFF"
-                android:textColor="@color/black"
-                android:gravity="left"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="3. 제목"
-                android:background="#FFFFFF"
-                android:textColor="@color/black"
-                android:gravity="left"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_margin="10dp"
-                android:background="@drawable/button_style"
-                android:textColor="#FFFFFF"
-                android:text="로드맵"/>
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_margin="10dp"
-                android:id="@+id/crebtn"
-                android:background="@drawable/button_style"
-                android:textColor="#FFFFFF"
-                android:text="+글쓰기" />
+            android:orientation="vertical"
+            android:id="@+id/F_list">
 
         </LinearLayout>
-    </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:text="글쓰기"
+                android:layout_gravity="bottom|right"
+                android:textColor="#ffffff"
+                android:background="@drawable/button_style"/>
+        </FrameLayout>
+
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
