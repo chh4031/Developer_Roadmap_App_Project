@@ -34,12 +34,13 @@ public class login extends AppCompatActivity {
         edid = (EditText) findViewById(R.id.etUsername);
         edpw = (EditText) findViewById(R.id.etPassword);
         loginbtn = (Button) findViewById(R.id.btnLogin);
+        String str;
 
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new SendTask().execute("http://192.168.0.17:7878/");
+                new SendTask().execute("http://192.168.0.29:7878/");
             }
         });
     }
@@ -52,7 +53,7 @@ public class login extends AppCompatActivity {
             try {
                 URL url = new URL(urls[0] + "sign");
                 con = (HttpURLConnection) url.openConnection();
-                con.setRequestMethod("POST");
+//                con.setRequestMethod("POST");
                 con.setDoOutput(true);
                 con.setDoInput(true);
                 con.setRequestProperty("Cache-Control", "no-cache");
@@ -95,16 +96,15 @@ public class login extends AppCompatActivity {
         }
 
         protected void onPostExecute(String result) {
-            if (result != null) {
-                Toast.makeText(login.this, result, Toast.LENGTH_SHORT).show();
-                if(result.equals("로그인 성공")) {
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    Intent godata = new Intent(login.this, MainActivity.class);
-                    godata.putExtra("key", "1");
-                    startActivity(intent);
-                    startActivity(godata);
-
-                }
+            if (result.equals("회원아님")) {
+                Toast.makeText(login.this, "회원아님", Toast.LENGTH_SHORT).show();
+            }else if (result.equals("아이디 또는 비번 틀림")){
+                Toast.makeText(login.this, "아이디 또는 비번 틀림", Toast.LENGTH_SHORT).show();
+            }else if (result != null){
+                Toast.makeText(login.this, "로그인 성공", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                intent.putExtra("key", result);
+                startActivity(intent);
             } else {
                 Toast.makeText(login.this, "전송실패", Toast.LENGTH_SHORT).show();
             }
