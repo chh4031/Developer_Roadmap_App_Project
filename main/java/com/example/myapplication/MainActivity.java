@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
         Intent putdata = getIntent();
         String key = putdata.getStringExtra("key");
-        if ("1".equals(key)){
+//        System.out.println(key);
+        if (key != null){
             main_btn3.setVisibility(View.GONE);
             main_btn4.setVisibility(View.GONE);
             main_btn5.setVisibility(View.VISIBLE);
