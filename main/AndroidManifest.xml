@@ -22,6 +22,7 @@
         <activity android:name=".singup"/>
         <activity android:name=".board_create"/>
         <activity android:name=".chat_create"/>
+        <activity android:name=".content"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
