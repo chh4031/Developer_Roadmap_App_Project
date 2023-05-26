@@ -103,7 +103,7 @@ public class login extends AppCompatActivity {
             }else if (result != null){
                 Toast.makeText(login.this, "로그인 성공", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                intent.putExtra("key", result);
+                intent.putExtra("thisId", result);
                 startActivity(intent);
             } else {
                 Toast.makeText(login.this, "전송실패", Toast.LENGTH_SHORT).show();
