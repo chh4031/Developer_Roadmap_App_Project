@@ -6,14 +6,17 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -25,6 +28,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class community extends AppCompatActivity{
+
+    TextView this_userC;
+    Button new_write;
 
     public class JSONTask extends AsyncTask<String,String,String> {
 
@@ -97,17 +103,24 @@ public class community extends AppCompatActivity{
             JSONObject j = i.getJSONObject(k);
             jsonObjectArray[k] = j;
             button[k] = new Button(this);
+            button[k].setGravity(Gravity.START);
             button[k].setId(k);
-            button[k].setText(j.toString());
+            button[k].setText(j.getString("community_title").toString());
             button[k].setLayoutParams(params);// 버튼의 텍스트 설정
             li.addView(button[k]);
+            String jsonTitle = j.getString("community_title");
+            String jsonContent = j.getString("community_content");
+            String JsonName = j.getString("user_name");
+            String JsonId = j.getString("user_user_id");
             button[k].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(getApplicationContext(), "버튼입력", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getApplicationContext(), board_create.class);
-                    intent.putExtra("Title", "게시글 1번");
-                    intent.putExtra("Content", "게시글 내용");
+//                    Toast.makeText(getApplicationContext(), "버튼입력", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), content.class);
+                    intent.putExtra("Title", jsonTitle);
+                    intent.putExtra("Content", jsonContent);
+                    intent.putExtra("Name", JsonName);
+                    intent.putExtra("Id", JsonId);
                     startActivity(intent);
                 }
             });
@@ -122,7 +135,29 @@ public class community extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.community);
+
+        this_userC = (TextView) findViewById(R.id.this_userC);
+        new_write = (Button) findViewById(R.id.write);
+
+        Intent putdata = getIntent();
+        String thisId = putdata.getStringExtra("thisId");
+        this_userC.setText(thisId);
         new JSONTask().execute("http://192.168.0.29:7878/");
+
+        if (thisId == null){
+            new_write.setVisibility(View.GONE);
+        }else{
+            new_write.setVisibility(View.VISIBLE);
+        }
+
+        new_write.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent goWrite = new Intent(getApplicationContext(), board_create.class);
+                goWrite.putExtra("thisId", thisId);
+                startActivity(goWrite);
+            }
+        });
 
     }
 
