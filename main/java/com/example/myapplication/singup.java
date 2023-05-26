@@ -59,7 +59,7 @@ public class singup extends AppCompatActivity{
                                 if(edname.length() == 0 || edid.length() == 0 || edpw.length() == 0){
                                     Toast.makeText(getApplicationContext(), "응 공백 안되", Toast.LENGTH_SHORT).show();
                                 }else {
-                                    new SendTask().execute("http://192.168.0.17:7878/");
+                                    new SendTask().execute("http://192.168.0.29:7878/");
                                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                     startActivity(intent);
                                 }
