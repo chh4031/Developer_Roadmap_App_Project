@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Button main_btn3;
     Button main_btn4;
     Button main_btn5;
-
+    TextView this_user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +27,15 @@ public class MainActivity extends AppCompatActivity {
         main_btn3 = (Button) findViewById(R.id.main_btn3);
         main_btn4 = (Button) findViewById(R.id.main_btn4);
         main_btn5 = (Button) findViewById(R.id.main_btn5);
+        this_user = (TextView) findViewById(R.id.this_user);
 
         super.onCreate(savedInstanceState);
 
         Intent putdata = getIntent();
-        String key = putdata.getStringExtra("key");
-        if ("1".equals(key)){
+        String thisId = putdata.getStringExtra("thisId");
+        this_user.setText(thisId);
+//        System.out.println(key);
+        if (thisId != null){
             main_btn3.setVisibility(View.GONE);
             main_btn4.setVisibility(View.GONE);
             main_btn5.setVisibility(View.VISIBLE);
@@ -45,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), community.class);
+                intent.putExtra("thisId", thisId);
                 startActivity(intent);
             }
         });
