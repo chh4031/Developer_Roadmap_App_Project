@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#05C76A"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#05C76A"
+            android:gravity="left|center"
+            android:orientation="vertical"
+            android:shadowColor="#000000"
+            android:shadowDx="7.0"
+            android:shadowDy="7.0"
+            android:shadowRadius="7.0"
+            android:text="안드로이드 로드맵"
+            android:textColor="#E4E1E1"
+            android:textSize="30dp"
+            tools:ignore="TextContrastCheck" />
+    </LinearLayout>
+<!-- 0. 안드로이드 로드맵 상단바-->
+
+
+
+    <RelativeLayout
+        android:layout_width="161dp"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="130dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="161dp"
+            android:layout_height="55dp"
+            android:background="@drawable/button1"
+            android:text="ㅤ"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+    </RelativeLayout>
+<!-- 1. 안드로이드 개발자 버튼-->
+
+
+
+    <RelativeLayout
+        android:layout_width="378dp"
+        android:layout_height="115dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="17dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="115dp"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+<!-- 그룹1 레이아웃-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="80.88dp"
+            android:layout_height="56.24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="140dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/button2"
+            android:text="ㅤ"/>
+<!--  언어선택이랑 위에선하나-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="80.88dp"
+            android:layout_height="27.01dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/button3"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck" />
+<!--  기본원리버튼-->
+
+        <View
+            android:layout_width="72dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="65dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="29dp"
+            android:background="@drawable/vector1" />
+<!-- 언어선택 왼쪽선-->
+
+        <View
+            android:layout_width="44.5dp"
+            android:layout_height="84dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="223dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/vector2" />
+<!--  언어선택 오른쪽선-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="58dp"
+            android:layout_height="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button4"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck" />
+<!--  자바 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="58dp"
+            android:layout_height="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/button5"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck" />
+<!--  코틀린 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="113dp"
+            android:layout_height="17dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="268dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/button6"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck" />
+<!--  안드로이드 스튜디오 다운로드 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="113dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="268dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/button7"
+            android:text="ㅤ"
+            tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
+<!--   코틀린 기초 배우기 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="113dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="268dp"
+            android:layout_marginTop="52dp"
+            android:background="@drawable/button8"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck" />
+<!--   oop의 기초 배우기-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="113dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="268dp"
+            android:layout_marginTop="76dp"
+            android:background="@drawable/button9"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck" />
+<!--    자료구조 및 알고리즘 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="113dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="268dp"
+            android:layout_marginTop="98dp"
+            android:background="@drawable/button10"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <!--    그레이들이란 버튼-->
+    </RelativeLayout>
+<!-- 2. 언어선택 등 버튼 9개, 선 2개-->
+    
+    
+    
+    <RelativeLayout
+        android:layout_width="222dp"
+        android:layout_height="102dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="11dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="198dp"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+<!--   그룹2 레이아웃-->
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="187dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/vector3" />
+        <!--   기본 원리 아래 선-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="75dp"
+            android:layout_height="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="159.74dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/button11"
+            android:text="ㅤ"
+            tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
+<!--  버전 관리 시스템 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="75dp"
+            android:layout_height="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="159.74dp"
+            android:layout_marginTop="68dp"
+            android:background="@drawable/button12"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck" />
+<!--   호스팅 시스템 버튼-->
+
+        <View
+        android:layout_width="36.08dp"
+        android:layout_height="15.2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="121dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="43dp"
+        android:background="@drawable/vector4" />
+<!--   버전 관리 시스템 버튼 선-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="49.95dp"
+            android:layout_height="13.22dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="95.24dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/button13"
+            android:text="ㅤ"
+            tools:ignore="VisualLintOverlap,TextSizeCheck,TouchTargetSizeCheck" />
+<!--    깃 허브 학습 버튼-->
+
+        <View
+            android:layout_width="91.5dp"
+            android:layout_height="60.5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="66dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/vector5" />
+<!--    호스팅 시스템 선-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="53.28dp"
+            android:layout_height="19.83dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/button14"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck" />
+<!--        깃 허브 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="53.28dp"
+            android:layout_height="19.83dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/button15"
+            android:text="ㅤ"
+            android:textColor="#455A64"
+            tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+<!--        깃 랩 버튼-->
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="53.28dp"
+            android:layout_height="19.83dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="82dp"
+            android:background="@drawable/button16"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck" />
+<!--        깃 버킷 버튼-->
+    </RelativeLayout>
+<!--  3. 버전 관리 시스템 등 버튼 6개, 선 3개-->
+    
+    
+    
+    <RelativeLayout
+        android:id="@+id/group_28"
+        android:layout_width="388.5dp"
+        android:layout_height="135dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="11dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="284dp" >
+<!--        그룹3 레이아웃-->
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="66dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="180dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/vector6" />
+<!--        호스팅 시스템 아래 선-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="64dp"
+            android:layout_height="22dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="68dp"
+            android:background="@drawable/button17"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck" />
+<!--        애플리케이션 개발 버튼-->
+
+        <View
+            android:layout_width="55dp"
+            android:layout_height="70.5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="215dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/vector7" />
+<!--        애플리케이션 오른쪽 선 -->
+
+        <View
+            android:layout_width="31.5dp"
+            android:layout_height="45.5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="113dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="47dp"
+            android:background="@drawable/vector8" />
+<!--        애플레케이션 왼쪽 선-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="119.41dp"
+            android:layout_height="15.49dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="271dp"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/button18"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck" />
+<!--        콘텐츠 제공자 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="119.41dp"
+            android:layout_height="15.49dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="271dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/button19"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck" />
+<!--        앱 구성 관리 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="119.41dp"
+            android:layout_height="15.49dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="271dp"
+            android:layout_marginTop="57dp"
+            android:background="@drawable/button20"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck" />
+<!--        인탠트 사용하기 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="119.41dp"
+            android:layout_height="15.49dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="271dp"
+            android:layout_marginTop="74dp"
+            android:background="@drawable/button21"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck" />
+<!--        컨택스트 이용하기 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="119.41dp"
+            android:layout_height="15.49dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="271dp"
+            android:layout_marginTop="91dp"
+            android:background="@drawable/button22"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck" />
+<!--        외부 라이브러리 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="111dp"
+            android:layout_height="12dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/button23"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck"/>
+<!--        액티비이와 생명주기 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="111dp"
+            android:layout_height="12dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/button24"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck" />
+<!--        프래그먼트~인터페이스 구축 버튼-->
+        
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="111dp"
+            android:layout_height="12dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="72dp"
+            android:background="@drawable/button25"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck"/>
+<!--        ans 디버깅 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="111dp"
+            android:layout_height="12dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="88dp"
+            android:background="@drawable/button26"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck"/>
+<!--        컴포넌트 사용법 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="35dp"
+            android:layout_height="12dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="104dp"
+            android:background="@drawable/button27"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck"/>
+<!--        Room버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="35dp"
+            android:layout_height="12dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="38dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="104dp"
+            android:background="@drawable/button28"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck"/>
+<!--        live data버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/group_41"
+            android:layout_width="35dp"
+            android:layout_height="12dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="76dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="104dp"
+            android:background="@drawable/button29"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck"/>
+<!--        데이터 바인딩 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="54dp"
+            android:layout_height="14dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/button30"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck"/>
+<!--        워크 매니저 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="54dp"
+            android:layout_height="14dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="57dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/button31"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck"/>
+<!--        내비게이션 버튼-->
+    </RelativeLayout>
+<!--    4. 애플리케이션 개발 등 버튼 15개, 선 3개-->
+
+
+
+    <RelativeLayout
+        android:layout_width="382dp"
+        android:layout_height="250dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="11dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="374dp">
+<!--    그룹4 레이아웃-->
+
+        <View
+            android:layout_width="21dp"
+            android:layout_height="72dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="175dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/vector9" />
+<!--        앱 강화 위 선-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="57dp"
+            android:layout_height="19dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="145dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/button32"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck" />
+<!--        앱 강화 버튼-->
+
+        <View
+            android:layout_width="40.59dp"
+            android:layout_height="86.5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="155dp"
+            android:layout_marginTop="105dp"
+            android:background="@drawable/vector10" />
+<!--        앱 강화 아래 선-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="73dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="140dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="194dp"
+            android:background="@drawable/button33"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck"/>
+<!--        지속적 학습 버튼-->
+
+        <View
+            android:layout_width="25.5dp"
+            android:layout_height="78dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="117dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/vector11" />
+<!--        앱 강화 왼쪽 선-->
+
+        <View
+            android:layout_width="76.5dp"
+            android:layout_height="11.5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="205dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="90dp"
+            android:background="@drawable/vector12" />
+<!--        앱 강화 오른쪽 선-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="63dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/button34"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck"/>
+<!--        보안 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="63dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="85dp"
+            android:background="@drawable/button35"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck"/>
+<!--        테스트 버튼-->
+
+        <View
+            android:layout_width="21.5dp"
+            android:layout_height="23dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="83dp"
+            android:background="@drawable/vector13"/>
+<!--        테스트 왼쪽 선-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="35dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="75dp"
+            android:background="@drawable/button36"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck"/>
+<!--        주닛 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="35dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="95dp"
+            android:background="@drawable/button37"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck"/>
+<!--        익스프레스 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="74dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/button38"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck"/>
+<!--        의존성 관리 버튼-->
+
+        <View
+            android:id="@+id/vector_15"
+            android:layout_width="21.5dp"
+            android:layout_height="23dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="32dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="125dp"
+            android:background="@drawable/vector14" />
+<!--        의존성 관리 왼쪽 선-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="74dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="140dp"
+            android:background="@drawable/button39"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck"/>
+<!--        동시성 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="35dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="118dp"
+            android:background="@drawable/button42"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck"/>
+<!--        닷져 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="35dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="138dp"
+            android:background="@drawable/button43"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck"/>
+<!--        코인 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="35dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="160dp"
+            android:background="@drawable/button44"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck"/>
+<!--        rxjava버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="35dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="84dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="160dp"
+            android:background="@drawable/button45"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck"/>
+<!--        코루틴버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="92dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="285dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="92dp"
+            android:background="@drawable/button46"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck"/>
+<!--        멀티스레딩 배우기 버튼-->
+
+        <View
+            android:layout_width="13.5dp"
+            android:layout_height="9dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="327.5dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="83dp"
+            android:background="@drawable/vector15" />
+        <!--        멀티 위 선-->
+
+        <View
+            android:layout_width="14dp"
+            android:layout_height="14.5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="331dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="110dp"
+            android:background="@drawable/vector16" />
+<!--        멀티 아래 선-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="119dp"
+            android:layout_height="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="272dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="63dp"
+            android:background="@drawable/button47"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck"/>
+<!--            배워야 하는가 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="119dp"
+            android:layout_height="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="272dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="125dp"
+            android:background="@drawable/button48"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck"/>
+<!--        어떻게 배우나 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="119dp"
+            android:layout_height="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="272dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="145dp"
+            android:background="@drawable/button49"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck"/>
+<!--            메모리 관련 버튼-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="119dp"
+            android:layout_height="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="272dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="165dp"
+            android:background="@drawable/button50"
+            android:text="ㅤ"
+            tools:ignore="TouchTargetSizeCheck"/>
+<!--        내부적 동작버튼-->
+
+
+
+    </RelativeLayout>
+<!--    5. 지속적 학습 버튼 등 버튼 17개 , 선 8개-->
+
+
+    <RelativeLayout
+        android:layout_width="410dp"
+        android:layout_height="360dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="374dp">
+
+        <TextView
+            android:id="@+id/company1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dongseo software Dev. Team 14"
+            android:textAlignment="center"
+            android:layout_marginTop="300dp"/>
+
+    </RelativeLayout>
+<!--    6. 하단 팀 이름-->
+
+
+    </RelativeLayout>
