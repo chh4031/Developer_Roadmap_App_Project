@@ -105,6 +105,7 @@ public class login extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 intent.putExtra("thisId", result);
                 startActivity(intent);
+                finish();
             } else {
                 Toast.makeText(login.this, "전송실패", Toast.LENGTH_SHORT).show();
             }
