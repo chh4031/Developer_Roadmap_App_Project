@@ -62,6 +62,7 @@ public class singup extends AppCompatActivity{
                                     new SendTask().execute("http://192.168.0.29:7878/");
                                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                     startActivity(intent);
+                                    finish();
                                 }
                             }
                         });
