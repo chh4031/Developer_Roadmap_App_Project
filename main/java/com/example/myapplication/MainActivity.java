@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                finish();
                 main_btn3.setVisibility(View.VISIBLE);
                 main_btn4.setVisibility(View.VISIBLE);
                 main_btn5.setVisibility(View.GONE);
