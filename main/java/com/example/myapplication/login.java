@@ -40,7 +40,7 @@ public class login extends AppCompatActivity {
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new SendTask().execute("http://192.168.0.29:7878/");
+                new SendTask().execute("http://chh.n-e.kr:7878/");
             }
         });
     }

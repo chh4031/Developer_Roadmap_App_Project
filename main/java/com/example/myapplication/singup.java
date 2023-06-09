@@ -57,9 +57,9 @@ public class singup extends AppCompatActivity{
                             @Override
                             public void onClick(View view) {
                                 if(edname.length() == 0 || edid.length() == 0 || edpw.length() == 0){
-                                    Toast.makeText(getApplicationContext(), "응 공백 안되", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(), "동의 체크 후 공백이 있으면 안됩니다.", Toast.LENGTH_SHORT).show();
                                 }else {
-                                    new SendTask().execute("http://192.168.0.29:7878/");
+                                    new SendTask().execute("http://chh.n-e.kr:7878/");
                                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                     startActivity(intent);
                                     finish();
@@ -71,7 +71,7 @@ public class singup extends AppCompatActivity{
                         Register.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-                                Toast.makeText(getApplicationContext(), "응 공백 안되", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "동의 체크 후 공백이 있으면 안됩니다.", Toast.LENGTH_SHORT).show();
                             }});
                         break;
                 }

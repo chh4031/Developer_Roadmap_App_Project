@@ -100,7 +100,9 @@ public class content extends AppCompatActivity {
                     la.setVisibility(View.VISIBLE);
                 } else if ("D".equals(this_check)) {
                     la.setVisibility(View.GONE);
-            }
+                } else if("A".equals(this_check)){
+                    up.setVisibility(View.GONE);
+                }
             }catch(JSONException e){
                 e.printStackTrace();
             }
@@ -199,12 +201,12 @@ public class content extends AppCompatActivity {
         Tv_Content.setText(Content);
         Tv_id.setText(Id);
 
-        new SendTask().execute("http://192.168.0.29:7878/");
+        new SendTask().execute("http://chh.n-e.kr:7878/");
 
         del.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new DelTesk().execute("http://192.168.0.29:7878/");
+                new DelTesk().execute("http://chh.n-e.kr:7878/");
             }
         });
 

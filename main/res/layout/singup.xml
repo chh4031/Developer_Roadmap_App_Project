@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/bgi">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,12 +45,14 @@
                 android:gravity="center_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="이용약관" />
+                android:textSize="50px"
+                android:text="이용약관"
+                android:textStyle="bold"/>
 
          <LinearLayout
             android:layout_width="370dp"
             android:layout_height="230dp"
-            android:layout_gravity="center">
+            android:layout_gravity="center" android:background="@drawable/content_style">
 
              <ScrollView
                  android:layout_width="match_parent"
@@ -57,30 +60,37 @@
                  android:layout_marginTop="10dp">
 
                  <TextView
+                     android:padding="10dp"
+                     android:textAlignment="textStart"
                      android:layout_width="match_parent"
                      android:layout_height="wrap_content"
-                     android:gravity="center_horizontal"
-                     android:text="Team14 익명 커뮤니티를 이용하는 모든 사용자는 아래의 이용약관을 따라야 합니다.
+                     android:text="
+    Team12 익명 커뮤니티를 이용하는 모든 사용자는 아래의 이용약관을 따라야 합니다.
+\n\n
+제 1조 (서비스 이용)\n
 
-    제 1조 (서비스 이용)
+    Team12 익명 커뮤니티는 인터넷을 통해 회원 간 정보를 공유하는 서비스를 제공합니다.\n
+    사용자는 이용 중 허위사실을 유포하거나 명예훼손, 저작권 침해 등의 범죄 행위를 할 수 없습니다.\n
+    사용자는 타인의 개인정보를 무단으로 수집하거나 이용할 수 없습니다.\n\n
 
-    Team14 익명 커뮤니티는 인터넷을 통해 회원 간 정보를 공유하는 서비스를 제공합니다.
-    사용자는 이용 중 허위사실을 유포하거나 명예훼손, 저작권 침해 등의 범죄 행위를 할 수 없습니다.
-    사용자는 타인의 개인정보를 무단으로 수집하거나 이용할 수 없습니다.
-    제 2조 (사용자의 의무)
+제 2조 (사용자의 의무)\n
 
-    사용자는 Team14 익명 커뮤니티 이용 중 불법적인 행위를 하지 않아야 합니다.
-    사용자는 타인의 권리나 프라이버시를 침해할 수 없습니다.
-    사용자는 자신이 작성한 게시물에 대해 책임을 져야 합니다.
-    제 3조 (면책조항)
+    사용자는 Team12 익명 커뮤니티 이용 중 불법적인 행위를 하지 않아야 합니다.\n
+    사용자는 타인의 권리나 프라이버시를 침해할 수 없습니다.\n
+    사용자는 자신이 작성한 게시물에 대해 책임을 져야 합니다.\n\n
 
-    Team14은 사용자 간의 정보 공유만을 허용할 뿐, 정보의 진실성과 적법성에 대해 책임을 지지 않습니다.
-    Team14은 이용자가 익명으로 서비스를 이용하는 것을 전제로 하므로, 사용자가 공개한 정보와 이로 인한 피해에 대해 책임을 지지 않습니다.
-    제 4조 (약관의 변경)
-    Team14은 약관을 변경할 수 있으며, 변경 시 공지사항을 통해 이용자에게 공지합니다.
+제 3조 (면책조항)\n
 
-    제 5조 (관할 법원 및 준거법)
-    본 약관에 관한 분쟁은 대한민국 법률에 따라 해결합니다. 만일 소송이 제기될 경우 관할 법원은 Team14 소재지를 기준으로 합니다" />
+    Team12은 사용자 간의 정보 공유만을 허용할 뿐, 정보의 진실성과 적법성에 대해 책임을 지지 않습니다.\n
+    Team12은 이용자가 익명으로 서비스를 이용하는 것을 전제로 하므로, 사용자가 공개한 정보와 이로 인한 피해에 대해 책임을 지지 않습니다.\n\n
+
+제 4조 (약관의 변경)\n
+
+    Team12은 약관을 변경할 수 있으며, 변경 시 공지사항을 통해 이용자에게 공지합니다.\n\n
+
+제 5조 (관할 법원 및 준거법)\n
+
+    본 약관에 관한 분쟁은 대한민국 법률에 따라 해결합니다. 만일 소송이 제기될 경우 관할 법원은 Team12 소재지를 기준으로 합니다\n" />
 
              </ScrollView>
 
@@ -176,7 +186,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
-                android:text="Dongseo software Dev. Team 14"/>
+                android:text="Dongseo software Dev. Team 12"/>
         </LinearLayout>
 
 </LinearLayout>

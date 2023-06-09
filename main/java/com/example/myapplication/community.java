@@ -7,7 +7,9 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -19,6 +21,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -29,8 +32,11 @@ public class community extends AppCompatActivity{
     Button new_write;
     Button home;
     Button re;
+    Button search;
+    EditText search_ed;
     String thisId;
 
+//    데이터를 보내는 부분
     public class JSONTask extends AsyncTask<String,String,String> {
 
         @Override
@@ -89,47 +95,49 @@ public class community extends AppCompatActivity{
 
         }
     }
-
+// 게시글 목록을 띄워주는 부분
     public Object onC(JSONArray i) throws JSONException {
-        System.out.println(i);
-        JSONObject[] jsonObjectArray = new JSONObject[i.length()];
-        LinearLayout li = findViewById((R.id.F_list));
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT, // width
-                LinearLayout.LayoutParams.WRAP_CONTENT);// height
-        Button[] button = new Button[i.length()];
-        for (int k = 0; k < i.length(); k++) {
-            JSONObject j = i.getJSONObject(k);
-            jsonObjectArray[k] = j;
-            button[k] = new Button(this);
-            button[k].setGravity(Gravity.START);
-            button[k].setId(k);
-            button[k].setText(j.getString("community_title").toString());
-            button[k].setLayoutParams(params);// 버튼의 텍스트 설정
-            li.addView(button[k]);
-            String jsonTitle = j.getString("community_title");
-            String jsonContent = j.getString("community_content");
-            String JsonName = j.getString("user_name");
-//            String JsonId = j.getString("user_user_id");
+        System.out.println("Check 값 : " + i);
+            JSONObject[] jsonObjectArray = new JSONObject[i.length()];
+            LinearLayout li = findViewById((R.id.F_list));
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT, // width
+                    LinearLayout.LayoutParams.WRAP_CONTENT);// height
+            params.setMargins(0, 0, 0, 4);
+            Button[] button = new Button[i.length()];
+            for (int k = 0; k < i.length(); k++) {
+                JSONObject j = i.getJSONObject(k);
+                jsonObjectArray[k] = j;
+                button[k] = new Button(this);
+                button[k].setGravity(Gravity.START);
+                button[k].setId(k);
+                button[k].setText(j.getString("community_title").toString());
+                button[k].setLayoutParams(params);// 버튼의 텍스트 설정
+                button[k].setBackgroundDrawable(getResources().getDrawable(R.drawable.content_style));
+                li.addView(button[k]);
+                String jsonTitle = j.getString("community_title");
+                String jsonContent = j.getString("community_content");
+                String JsonName = j.getString("user_name");
+                //            String JsonId = j.getString("user_user_id");
 
-            button[k].setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-//                    Toast.makeText(getApplicationContext(), "버튼입력", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getApplicationContext(), content.class);
-                    intent.putExtra("Title", jsonTitle);
-                    intent.putExtra("Content", jsonContent);
-                    intent.putExtra("Name", JsonName);
-                    intent.putExtra("Id", thisId);
-                    startActivity(intent);
-                }
-            });
+                button[k].setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        //                    Toast.makeText(getApplicationContext(), "버튼입력", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), content.class);
+                        intent.putExtra("Title", jsonTitle);
+                        intent.putExtra("Content", jsonContent);
+                        intent.putExtra("Name", JsonName);
+                        intent.putExtra("Id", thisId);
+                        startActivity(intent);
+                    }
+                });
+            }
+
+            System.out.println(jsonObjectArray[0].toString());
+
+            return li;
         }
-
-        System.out.println(jsonObjectArray[0].toString());
-
-        return li;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -140,11 +148,13 @@ public class community extends AppCompatActivity{
         new_write = (Button) findViewById(R.id.write);
         home = (Button) findViewById(R.id.home);
         re = (Button) findViewById(R.id.re);
+        search = (Button) findViewById(R.id.search);
+        search_ed = (EditText) findViewById(R.id.search_edit);
 
         Intent putdata = getIntent();
         thisId = putdata.getStringExtra("thisId");
         this_userC.setText(thisId);
-        new JSONTask().execute("http://192.168.0.29:7878/");
+        new JSONTask().execute("http://chh.n-e.kr:7878/");
 
         if (thisId == null){
             new_write.setVisibility(View.GONE);
@@ -178,6 +188,17 @@ public class community extends AppCompatActivity{
                 Intent goWrite = new Intent(getApplicationContext(), board_create.class);
                 goWrite.putExtra("thisId", thisId);
                 startActivity(goWrite);
+                finish();
+            }
+        });
+
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent goSearch = new Intent(getApplicationContext(), search_content.class);
+                goSearch.putExtra("thisId", thisId);
+                goSearch.putExtra("searchEd", search_ed.getText().toString());
+                startActivity(goSearch);
                 finish();
             }
         });

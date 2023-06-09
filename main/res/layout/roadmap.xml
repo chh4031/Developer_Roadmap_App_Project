@@ -4,22 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/bgi">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="#05C76A"
         android:elevation="8dp"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:padding="10dp">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="2"
             android:background="#05C76A"
             android:gravity="left|center"
-            android:orientation="vertical"
             android:shadowColor="#000000"
             android:shadowDx="7.0"
             android:shadowDy="7.0"
@@ -28,7 +29,19 @@
             android:textColor="#E4E1E1"
             android:textSize="30dp" />
 
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#05C76A"
+            android:gravity="right|center"
+            android:text="user_name"
+            android:textColor="#F2F2F2"
+            android:textSize="20dp"
+            android:id="@+id/this_user"/>
+
     </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -43,22 +56,19 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginBottom="4px">
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/androidButton"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/content_style"
                     android:gravity="left|top"
-                    android:text="1. 안드로이드"
+                    android:text="1. 안드로이드 (Android)"
                     android:textColor="#000000"
-                    android:stateListAnimator="@null"/>
+                    android:stateListAnimator="@null" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#000000" />
 
             </LinearLayout>
 
@@ -66,20 +76,17 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginBottom="4px">
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="2. 프론트엔드"
+                    android:text="2. 프론트엔드 (Frontend)"
                     android:textColor="#000000"
                     android:gravity="left|top"
-                    android:background="@android:color/transparent"/>
+                    android:background="@drawable/content_style" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#000000" />
 
             </LinearLayout>
 
@@ -88,21 +95,18 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginBottom="4px">
 
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="3. 백엔드"
+                    android:text="3. 백엔드 (Backend)"
                     android:textColor="#000000"
                     android:gravity="left|top"
-                    android:background="@android:color/transparent" />
+                    android:background="@drawable/content_style" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#000000" />
 
             </LinearLayout>
 
@@ -120,6 +124,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="Dongseo software Dev. Team 14"/>
+            android:text="Dongseo software Dev. Team 12"/>
     </LinearLayout>
 </LinearLayout>

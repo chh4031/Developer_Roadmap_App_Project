@@ -5,34 +5,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    tools:ignore="ExtraText">
+    tools:ignore="ExtraText"
+    android:background="@drawable/bgi">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="#05C76A"
         android:elevation="8dp"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:padding="10dp">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="2"
             android:background="#05C76A"
             android:gravity="left|center"
-            android:orientation="vertical"
             android:shadowColor="#000000"
             android:shadowDx="7.0"
             android:shadowDy="7.0"
             android:shadowRadius="7.0"
-            android:text="안드로이드 로드맵"
+            android:text="안드로이드"
             android:textColor="#E4E1E1"
-            android:textSize="30dp"
-            tools:ignore="TextContrastCheck" />
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#05C76A"
+            android:gravity="right|center"
+            android:text="user_name"
+            android:textColor="#F2F2F2"
+            android:textSize="20dp"
+            android:id="@+id/this_user"/>
+
     </LinearLayout>
 <!-- 0. 안드로이드 로드맵 상단바-->
-
-
 
     <RelativeLayout
         android:layout_width="161dp"
@@ -107,6 +117,7 @@
 <!--  언어선택 오른쪽선-->
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/JAVA_btn"
             android:layout_width="58dp"
             android:layout_height="15dp"
             android:layout_alignParentLeft="true"
@@ -119,6 +130,7 @@
 <!--  자바 버튼-->
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/KOTLIN_btn"
             android:layout_width="58dp"
             android:layout_height="15dp"
             android:layout_alignParentLeft="true"
@@ -827,7 +839,7 @@
 <!--    5. 지속적 학습 버튼 등 버튼 17개 , 선 8개-->
 
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="410dp"
         android:layout_height="360dp"
         android:layout_alignParentLeft="true"
@@ -838,11 +850,11 @@
             android:id="@+id/company1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dongseo software Dev. Team 14"
+            android:text="Dongseo software Dev. Team 12"
             android:textAlignment="center"
             android:layout_marginTop="300dp"/>
 
-    </RelativeLayout>
+    </LinearLayout>
 <!--    6. 하단 팀 이름-->
 
 

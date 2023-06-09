@@ -24,16 +24,17 @@
         <activity android:name=".chat_create"/>
         <activity android:name=".content"/>
         <activity android:name=".update"/>
-        <activity
-            android:name=".MainActivity"
+        <activity android:name=".android_roadmap"/>
+        <activity android:name=".search_content"/>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".loading"
             android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
     </application>
 
 </manifest>
